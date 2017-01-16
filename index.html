@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="bannerApp">
+	<head>
+		<meta charset="UTF-8">
+		<title>rentalcars.com | Marketing Banner APP</title>
+ 		<link rel="stylesheet" href="css/main.css">
+    	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<script src="libs/jquery/dist/jquery.js"></script>
+
+        <script src="libs/jquery-colorbox/jquery.colorbox-min.js"></script>
+        <script src="libs/jquery-colorbox/jquery.colorbox-min.js"></script>
+        <script src="libs/angular/angular.js"></script>
+        <script src="libs/angular-animate/angular-animate.js"></script>
+
+		<script src="js/app.js"></script>
+		<script src="js/scripts.js"></script>
+
+	</head>
+
+	<body ng-controller="MainCtrl">
+		<header>
+        	<!--div class="logo">
+        	</div>
+        	<div class="header">
+            	<div class="logo">
+                <a href="index.html"><img src="img/logo.png"/></a>
+            	</div-->
+							<div class="steps">
+		<p><strong ng-class="{'selected': page == 1, 'passed': page &gt; 1}" ng-click="previousStep(1)">Pick your banner sizes <i class="fa fa-file-image-o"></i></strong></p>
+		<p><strong ng-class="{'selected': page == 2, 'passed': page &gt; 2}" ng-click="previousStep(2)">Choose languages<i class="fa fa-globe"></i></strong></p>
+		<p><strong ng-class="{'selected': page == 3, 'passed': page &gt; 3}" ng-click="previousStep(3)">Enter your Aff code<i class="fa fa-cogs"></i></strong></p>
+		<p><strong ng-class="{'selected': page == 4}">Grab your banners</strong></p>
+	</div>
+        	</div>
+					<div class="logo">
+            	<a href="index.html"><img src="img/rc-small.png"></a>
+        	</div>
+					<div id="progress">
+						<li class="progress--marker"></li>
+					</div>
+    	</header>
+    	<div ng-show="page === 1" class="container">
+			<!--div class="search_input size">
+            <input ng-model="search.size" type="text" id="searchcriteria" placeholder="Search for the banner size you are looking for....." />
+        </div-->
+
+				<span class="box__dim"ng-repeat="banner in banners | filter: {selected: true}">
+						{{banner.dimensions}}
+				</span>
+
+        	<section id="boxes" class="banner_choice">
+				<div ng-repeat="banner in banners | filter: {dimensions: search.size}">
+			 		<div class="box show">
+        				<div class="banner_preview">
+            				<div class="banner_img">
+                				<img ng-src="http://www.rentalcars.com/partners/integrations/banners/{{banner.img}}/en.jpg">
+           			 		</div>
+            				<h1>{{banner.dimensions}}</h1>
+            				<p>{{banner.description}}</p>
+            				<div class="banner_footer">
+                				<div class="tab tab--magnify">
+                                    <a colorbox href="http://www.rentalcars.com/partners/integrations/banners/{{banner.img}}/en.jpg">
+                                        <i class="fa fa-search-plus fa-3x"></i>
+                                    </a>
+                                </div>
+                				<div class="tab tab--add" ng-class="{'tab--added': banner.selected}" ng-click="banner.selected = !banner.selected">
+                    				<span><i class="fa fa-check-circle fa-3x"></i></span>
+                				</div>
+           			 		</div>
+        				</div>
+    				</div>
+				</div>
+			</section>
+    	</div>
+    	<div ng-show="page === 2" class="container">
+        	<div id="languages">
+            <h3>Please Choose your Language(s)</h3>
+        		<div ng-repeat="lang in languages | filter: {languages: search.code}">
+            		<div class="langtab langtab--add" ng-class="{'langtab--added': lang.selected}" ng-click="lang.selected = !lang.selected">
+                    	<span ng-class="lang.code" class="flag"></span>
+                    	<p>{{lang.title}}</p>
+                    	<i class="fa fa-check fa-3x"></i>
+            		</div>
+        		</div>
+    		</div>
+    	</div>
+        <div ng-show="page === 3" class="container">
+            <div class="aff">
+                <h3>Please Enter Your Affiliate Code</h3>
+                <div class="search_input size">
+                    <input ng-model="affcode" type="text" size="50" >
+                </div>
+
+                <label><input type="checkbox" ng-model="adcampcheck" />Adcamp?</label>
+                <label><input type="checkbox" ng-model="adplatcheck" />Adplat?</label>
+
+                <div ng-show="adcampcheck">
+                    <h3>Please Enter Your Adcamp Code</h3>
+                    <div class="search_input size">
+                    <input ng-model="adcamp" type="text" size="50" >
+                    </div>
+                </div>
+
+
+
+                <div ng-show="adplatcheck">
+                    <h3>Please Enter Your Adplat Code</h3>
+                    <div class="search_input size">
+                    <input ng-model="adplat" type="text" size="50" >
+                    </div>
+                </div>
+                </div>
+                </div>
+
+
+
+
+        </div>
+        <div ng-show="page === 4" class="container" id="results">
+            <div ng-repeat="banner in banners | filter: {selected: true}">
+                <div class="banner-wrap">
+                    <div ng-repeat="language in languages | filter: {selected: true} | limitTo: 1" class="banner-img">
+                        <img ng-src="http://www.rentalcars.com/partners/integrations/banners/{{banner.img}}/{{language.code}}.jpg">
+                    </div>
+                    <div ng-repeat="language in languages | filter: {selected: true}" class="banner-markup">
+                        <div id="try">{{language.title}}</div>
+                        <code>&lt;a href="http://www.rentalcars.com/?affiliateCode=<span class="highlight">{{affcode}}</span>&preflang=<span class="highlight">{{language.code}}</span><span ng-show="adcamp">&adcamp=<span class="highlight">{{adcamp}}</span></span><span ng-show="adplat">&adplat=<span class="highlight">{{adplat}}</span></span>" rel="nofollow"&gt;</code><code>&lt;img src="http://www.rentalcars.com/partners/integrations/banners/{{banner.img}}/{{language.code}}.jpg"&gt;&lt;/a&gt;</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    	<footer>
+        	<div class="logo">
+            	<a href="index.html"><img src="img/minilogo.png"></a>
+        	</div>
+            <div ng-show="page === 1">
+                <h2 class="sizes">Your Chosen Sizes</h2>
+                <div class="footer-summary">
+
+                </div>
+                <a id="btnLangs" ng-click="loadStep(2, banners)" class="get_btn lang" ng-hide="searchcriteria">Choose Languages</a>
+            </div>
+            <div ng-show="page === 2">
+                <h2 class="results">Your Chosen langs</h2>
+                <div class="footer-summary">
+                    <span ng-repeat="lang in languages | filter: {selected: true}">
+                        {{lang.code}}
+                    </span>
+                </div>
+                <a id="btnBanners" ng-click="loadStep(3, languages)" class="get_btn banner">Aff code</a>
+            </div>
+            <div ng-show="page === 3">
+                <h2 class="results">aff code</h2>
+                <a id="btnBanners" ng-click="loadStep(4, affcode)" class="get_btn banner">Get Banners</a>
+            </div>
+            <div ng-show="page === 4">
+                <h2 class="results">Your banners are now displayed to the left.</h2>
+            </div>
+        </footer>
+
+	</body>
+</html>
