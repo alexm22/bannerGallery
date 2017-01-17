@@ -47,7 +47,7 @@ body {
 p {
   font-weight: $weight-thin;
   color: darken( $grey, 30% );
-  font-size: $font-size-small;
+  font-size: 0.9rem;
   margin-top: 0;
 }
 
@@ -80,23 +80,10 @@ h3 {
   justify-content: center;
 }
 
-.steps p {
-  color: lighten( $grey, 26% );
-  padding-top: 10px;
-  flex: 4;
-  text-align: center;
-}
-
-.steps p strong.selected {
-  color: $green;
-  text-align: center;
-}
-
 // Header & Footer //
 
 header {
   background-color: #0E99FF;
-  padding: 1% 0;
   position: relative;
   border-bottom: 3px soild darken($blue, 20%);
 }
@@ -135,19 +122,18 @@ footer h2 {
 }
 
 .get_btn {
-  background: $green;
+  background: $dark-blue;
   border-radius: $global-border-radius;
   bottom: 5px;
   color: $white;
   cursor: pointer;
-  padding: 22.3px 20px;
   margin: 0 auto;
   transition: background-color 0.9s ease;
-  width: 90%;
   text-align: center;
-  font-weight: $weight-thick;
-  margin: 0px auto 2px 12px;
-  position: absolute;
+  font-weight: $weight-regular;
+  padding: 0.6rem 1.2rem;
+  box-shadow: 1px 1px 1px $blue inset;
+  box-shadow: 1px 2px 2px #b7b7b7;
 }
 
 .get_btn:hover {
@@ -307,7 +293,7 @@ height: 310px
   width: 100%;
   border-top: 1px solid #e2e2e2;
   position: relative;
-  top: 40px;
+  top: 30px;
    height: 60%;
 }
 
@@ -470,6 +456,7 @@ input[type=checkbox]:checked + label:before {
     background: $green;
     box-shadow: none;
     border: none;
+    transition: all 0.1s linear 0s;
     /****box-shadow: 0px -1px 1px #5e5e5e;****/
 }
 
@@ -713,19 +700,6 @@ code {
     max-width: 28%;
 }
 
-#progress {
-  width: 100%;
-  height: 4px;
-  position: absolute;
-  bottom: 0;
-}
-
-li.progress--marker {
-  width: 25%;
-  background-color: $green;
-  height: 4px;
-}
-
 .logo img {
     width: 30px;
     float: right;
@@ -745,8 +719,75 @@ li.progress--marker {
   border-right: 1px solid darken($grey-light, 1%);
   margin-left: 10px;
   box-shadow: 1px 0px 0px #fff;
+  transition: all 0.5s ease-in-out;
 }
 
+nav {
+  background: #FFFFFF;
+  border-bottom: 1px solid darken(#FFFFFF, 12%);
+  padding: 1rem;
+  top: 0px;
+  z-index: 20;
+  display: flex;
+  width: 100%;
+}
+
+nav > div {
+  flex: 1;
+  text-align: right;
+}
+
+.icn {
+  width: 20px;
+  height: 20px;
+}
+
+.icn.fa {
+  color: $grey;
+  text-shadow: none;
+}
+
+.steps .fa {
+    margin-left: 10px;
+}
+
+.steps button {
+  padding: 0.2rem 1rem;
+  flex: 4;
+  height: 80px;
+  background: none;
+  border: none;
+  border-width: 0;
+  box-sizing: border-box;
+  position: relative;
+  color: lighten( $grey, 26% );
+  font-size: 0.8rem;
+}
+
+.steps button.selected {
+  color: $green !important;
+  width: 100%;
+  transition: color 1s ease;
+}
+
+.steps button > span {
+  width: 0;
+}
+
+.steps button.selected > span {
+    width: 100%;
+    height: 4px;
+    position: absolute;;
+    z-index: 99999999999999999;
+    bottom: 0;
+    background: $green;
+    left:0;
+    transition: width 1s ease;
+}
+
+.tab--added ~ div {
+  border: 4px solid red;
+}
 /************** Colorbox Core Style: ***************/
 
 #colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
@@ -784,7 +825,7 @@ li.progress--marker {
 }
 
 @media screen and (min-width: 880px) {
-    .box { width: 30.3%; }
+    .box { width: 33.3%; }
     .search_input {}
     .header { padding: 0;}
 

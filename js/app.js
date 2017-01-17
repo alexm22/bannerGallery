@@ -1,4 +1,4 @@
-var app = angular.module('bannerApp', ['ngAnimate'])
+var app = angular.module('bannerApp', ['ngAnimate', 'sticky'])
 
 app.controller('MainCtrl', function($scope, $filter, $window, DataService) {
     $scope.languages = DataService.getLanguages();

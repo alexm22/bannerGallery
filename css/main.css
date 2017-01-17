@@ -14,7 +14,7 @@ body {
 p {
   font-weight: 300;
   color: #4d4d4d;
-  font-size: 0.8em;
+  font-size: 0.9rem;
   margin-top: 0; }
 
 h1 {
@@ -42,19 +42,8 @@ h3 {
   display: flex;
   justify-content: center; }
 
-.steps p {
-  color: #dbdbdb;
-  padding-top: 10px;
-  flex: 4;
-  text-align: center; }
-
-.steps p strong.selected {
-  color: #0AE791;
-  text-align: center; }
-
 header {
   background-color: #0E99FF;
-  padding: 1% 0;
   position: relative;
   border-bottom: 3px soild #055b9a; }
 
@@ -87,19 +76,18 @@ footer h2 {
   font-size: 20px; }
 
 .get_btn {
-  background: #0AE791;
+  background: #0771C4;
   border-radius: 2px;
   bottom: 5px;
   color: #FFFFFF;
   cursor: pointer;
-  padding: 22.3px 20px;
   margin: 0 auto;
   transition: background-color 0.9s ease;
-  width: 90%;
   text-align: center;
-  font-weight: 700;
-  margin: 0px auto 2px 12px;
-  position: absolute; }
+  font-weight: 400;
+  padding: 0.6rem 1.2rem;
+  box-shadow: 1px 1px 1px #0E94F7 inset;
+  box-shadow: 1px 2px 2px #b7b7b7; }
 
 .get_btn:hover {
   background: #46E0C6; }
@@ -233,7 +221,7 @@ footer h2 {
   width: 100%;
   border-top: 1px solid #e2e2e2;
   position: relative;
-  top: 40px;
+  top: 30px;
   height: 60%; }
 
 .box p {
@@ -370,6 +358,7 @@ input[type=checkbox]:checked + label:before {
   background: #0AE791;
   box-shadow: none;
   border: none;
+  transition: all 0.1s linear 0s;
   /****box-shadow: 0px -1px 1px #5e5e5e;****/ }
 
 .langtab--added p {
@@ -593,17 +582,6 @@ code {
   position: absolute;
   max-width: 28%; }
 
-#progress {
-  width: 100%;
-  height: 4px;
-  position: absolute;
-  bottom: 0; }
-
-li.progress--marker {
-  width: 25%;
-  background-color: #0AE791;
-  height: 4px; }
-
 .logo img {
   width: 30px;
   float: right;
@@ -621,7 +599,65 @@ li.progress--marker {
   border-bottom: 1px solid #edebe7;
   border-right: 1px solid #edebe7;
   margin-left: 10px;
-  box-shadow: 1px 0px 0px #fff; }
+  box-shadow: 1px 0px 0px #fff;
+  transition: all 0.5s ease-in-out; }
+
+nav {
+  background: #FFFFFF;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 1rem;
+  top: 0px;
+  z-index: 20;
+  display: flex;
+  width: 100%; }
+
+nav > div {
+  flex: 1;
+  text-align: right; }
+
+.icn {
+  width: 20px;
+  height: 20px; }
+
+.icn.fa {
+  color: #999999;
+  text-shadow: none; }
+
+.steps .fa {
+  margin-left: 10px; }
+
+.steps button {
+  padding: 0.2rem 1rem;
+  flex: 4;
+  height: 80px;
+  background: none;
+  border: none;
+  border-width: 0;
+  box-sizing: border-box;
+  position: relative;
+  color: #dbdbdb;
+  font-size: 0.8rem; }
+
+.steps button.selected {
+  color: #0AE791 !important;
+  width: 100%;
+  transition: color 1s ease; }
+
+.steps button > span {
+  width: 0; }
+
+.steps button.selected > span {
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  z-index: 99999999999999999;
+  bottom: 0;
+  background: #0AE791;
+  left: 0;
+  transition: width 1s ease; }
+
+.tab--added ~ div {
+  border: 4px solid red; }
 
 /************** Colorbox Core Style: ***************/
 #colorbox, #cboxOverlay, #cboxWrapper {
@@ -733,7 +769,7 @@ li.progress--marker {
 
 @media screen and (min-width: 880px) {
   .box {
-    width: 30.3%; }
+    width: 33.3%; }
   .header {
     padding: 0; } }
 
