@@ -29,10 +29,7 @@
 <button ng-class="{'selected': page == 3, 'passed': page &gt; 3}" ng-click="previousStep(3)">Enter your Aff code <i class="fa fa-cogs"></i></button>
 <button ng-class="{'selected': page == 4, 'passed': page &gt; 4}" ng-click="previousStep(3)">Grab your banners</button>
 
-						<!--p ng-class="{'selected': page == 1, 'passed': page &gt; 1}"><strong ng-click="previousStep(1)">Pick your banner sizes <i class="fa fa-file-image-o"></i></strong></p>
-						<p ng-class="{'selected': page == 2, 'passed': page &gt; 2}"><strong ng-click="previousStep(2)">Choose languages<i class="fa fa-globe"></i></strong></p>
-						<p><strong ng-class="{'selected': page == 3, 'passed': page &gt; 3}" ng-click="previousStep(3)">Enter your Aff code<i class="fa fa-cogs"></i></strong></p>
-						<p><strong ng-class="{'selected': page == 4}">Grab your banners</strong></p-->
+
 					</div>
         	</div>
 					<div class="logo">
@@ -41,9 +38,10 @@
     	</header>
 			<nav sticky>
 				<div>
+					<div ng-show="page === 1">
 						<a id="btnLangs" ng-click="loadStep(2, banners)" class="get_btn lang" ng-hide="searchcriteria">Choose Languages</a>
+					</div>
 						<div ng-show="page === 2">
-                <h2 class="results">Your Chosen langs</h2>
                 <div class="footer-summary">
                     <span ng-repeat="lang in languages | filter: {selected: true}">
                         {{lang.code}}
@@ -52,11 +50,9 @@
                 <a id="btnBanners" ng-click="loadStep(3, languages)" class="get_btn banner">Aff code</a>
             </div>
             <div ng-show="page === 3">
-                <h2 class="results">aff code</h2>
                 <a id="btnBanners" ng-click="loadStep(4, affcode)" class="get_btn banner">Get Banners</a>
             </div>
             <div ng-show="page === 4">
-                <h2 class="results">Your banners are now displayed to the left.</h2>
             </div>
 				</div>
 			</nav>
@@ -64,8 +60,9 @@
 			<!--div class="search_input size">
             <input ng-model="search.size" type="text" id="searchcriteria" placeholder="Search for the banner size you are looking for....." />
         </div-->
-
-				<span class="box__dim" ng-repeat="banner in banners | filter: {selected: true}">
+				<div id="notifications" ng-click="hideNotif()">
+				</div>
+				<span sticky class="box__dim" ng-repeat="banner in banners | filter: {selected: true}">
 						{{banner.dimensions}}
 				</span>
 
@@ -74,7 +71,7 @@
 			 		<div class="box show">
         				<div class="banner_preview">
             				<div class="banner_img">
-                				<img ng-src="http://www.rentalcars.com/partners/integrations/banners/{{banner.img}}/en.jpg">
+                				<img ng-src="img/preview/{{banner.preview}}/en.jpg">
            			 		</div>
             				<h1><i class="fa fa-file-image-o icn"></i>{{banner.dimensions}}</h1>
             				<p>{{banner.description}}</p>

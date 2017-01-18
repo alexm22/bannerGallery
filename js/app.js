@@ -7,6 +7,10 @@ app.controller('MainCtrl', function($scope, $filter, $window, DataService) {
 
     $scope.affcode;
 
+    $scope.hideNotif = function () {
+      $window.document.getElementById('notifications').className += "hideNotif";
+    }
+
     $scope.loadStep = function(step, validate) {
         if (typeof validate === "object") {
             if ($filter('filter')(validate, {
@@ -14,7 +18,8 @@ app.controller('MainCtrl', function($scope, $filter, $window, DataService) {
                 }).length >= 1) {
                 $scope.page = step;
             } else {
-                $window.alert("Please choose select an option.")
+                $window.document.getElementById('notifications').innerHTML = "Please choose select an option";
+                $window.document.getElementById('notifications').className += "meh rah ";
             }
         } else if (!validate) {
             $window.alert("Please enter a value.")

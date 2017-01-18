@@ -267,6 +267,7 @@
               $elem
                 .css('z-index', 10)
                 .css('top', initialCSS.top)
+                .css('background-color', 'white')
                 .css('position', initialCSS.position)
                 .css('left', initialCSS.cssLeft)
                 .css('margin-top', initialCSS.marginTop)
@@ -314,12 +315,14 @@
             $elem
               .css('z-index', '10')
               .css('position', 'fixed')
+              .css('background-color', '#0771C4')
               .css('left', $elem.css('left').replace('px', '') + 'px')
               .css(anchor, (offset + elementsOffsetFromTop (scrollbar)) + 'px')
               .css('margin-top', 0);
 
             if (anchor === 'bottom') {
-              $elem.css('margin-bottom', 0);
+              $elem.css('margin-bottom', 0)
+              .css('background-color', 'yellow');
             }
           }
 

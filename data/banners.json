@@ -1,55 +1,69 @@
+
 [{
     "dimensions": "240x400",
     "description": "Find great deals on worldwide car hire!",
-    "img": "240--400/lifestyle-road"
-}, {
-    "dimensions": "120x240",
-    "description": "Search for car rental",
-    "img": "120--240/lifestyle-road"
-}, {
-     "dimensions": "180x150",
-    "description": "Search",
-    "img": "180--150/lifestyle-beach"
-}, {
-    "dimensions": "160x600",
-    "description": "Find great deals on worldwide car hire!",
-    "img": "160--600/lifestyle-road"
-}, {
-    "dimensions": "468x60",
-    "description": "We have cars in over 28,000 locations worldwide",
-    "img": "468--60/lifestyle-beach"
-}, {
-    "dimensions": "234x60",
-    "description": "Search",
-    "img": "234--60/lifestyle-car"
-}, {
-	"dimensions": "250x250",
-    "description": "Best car hire prices Guaranteed",
-    "img": "250--250/lifestyle-window"
-}, {
-    "dimensions": "336x280",
-    "description": "Big brands. huge choice, massive savings!",
-    "img": "336--280/lifestyle-beach"
-}, {
-	"dimensions": "300x250",
-    "description": "Big brands. huge choice, massive savings!",
-    "img": "300--250/carraod"
+    "img": "240--400/lifestyle-road",
+    "preview": "lifestyle-road"
 }, {
     "dimensions": "120x90",
     "description": "Search now!",
-    "img": "120--90/lifestyle-road"
+    "img": "120--90/lifestyle-road",
+    "preview": "lifestyle-road4"
+}, {
+     "dimensions": "180x150",
+    "description": "Search",
+    "img": "180--150/lifestyle-beach",
+    "preview": "lifestyle-beach"
+}, {
+    "dimensions": "160x600",
+    "description": "Find great deals on worldwide car hire!",
+    "img": "160--600/lifestyle-road",
+    "preview": "lifestyle-road2"
+}, {
+    "dimensions": "468x60",
+    "description": "We have cars in over 28,000 locations worldwide",
+    "img": "468--60/lifestyle-beach",
+    "preview": "lifestyle-beach"
+}, {
+    "dimensions": "234x60",
+    "description": "Search",
+    "img": "234--60/lifestyle-car",
+    "preview": "lifestyle-car"
+}, {
+	"dimensions": "250x250",
+    "description": "Best car hire prices Guaranteed",
+    "img": "250--250/lifestyle-window",
+    "preview" : "lifestyle-window"
+}, {
+    "dimensions": "336x280",
+    "description": "Big brands. huge choice, massive savings!",
+    "img": "336--280/lifestyle-beach",
+    "preview": "lifestyle-road3"
+}, {
+	"dimensions": "300x250",
+    "description": "Big brands. huge choice, massive savings!",
+    "img": "300--250/carraod",
+      "preview": "lifestyle-road3"
+}, {
+    "dimensions": "120x240",
+    "description": "Search for car rental",
+    "img": "120--240/lifestyle-road",
+    "preview": "lifestyle-road"
 }, {
     "dimensions": "125x125",
     "description": "lowest prices guaranteed!",
-    "img": "125--125/lifestyle-beach"
+    "img": "125--125/lifestyle-beach",
+      "preview": "lifestyle-beach"
 }, {
     "dimensions": "728x90",
     "description": "Book online today and save upto 15%",
-    "img": "728--90/lifestyle-beach"
+    "img": "728--90/lifestyle-beach",
+    "preview": "lifestyle-beach"
 }, {
     "dimensions": "120x600",
     "description": "Find great deals on worldwide car hire!",
-    "img": "120--600/lifestyle-road"
+    "img": "120--600/lifestyle-road",
+    "preview": "lifestyle-road2"
 }, {
     "dimensions": "88x31",
     "description": "-",
@@ -57,6 +71,7 @@
 }, {
     "dimensions": "120x60",
     "description": "Search now!",
-    "img": "120--60/lifestyle-road"
+    "img": "120--60/lifestyle-road",
+    "preview": "lifestyle-road4"
 
 }]

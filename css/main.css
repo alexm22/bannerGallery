@@ -175,11 +175,14 @@ footer h2 {
   -webkit-transition: height 0.35s, width 0.35s;
   /* Safari */
   transition: height 0.35s, width 0.35s;
-  width: 30%;
-  margin: 0 35%; }
-
-.banner_preview {
-  padding-top: 30px; }
+  width: 22%;
+  margin: 0 39%;
+  border-radius: 200px;
+  transition-timing-function: ease-in;
+  transition: 0.35s;
+  top: 30px;
+  position: relative;
+  height: 80px; }
 
 .banner_preview h1 {
   text-transform: uppercase;
@@ -196,33 +199,29 @@ footer h2 {
   min-height: 36px; }
 
 .banner_img {
-  border-radius: 160px;
   height: 160px;
-  margin: 0 20%;
+  margin: 0%;
   overflow: hidden;
-  width: 60%;
+  width: 100%;
   transition-timing-function: ease-in;
-  transition: 0.35s; }
+  transition: 0.35s;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px; }
 
 .banner_img > img {
-  min-width: 100%;
-  min-height: 100%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
   position: relative;
-  left: 50%;
-  top: 50%; }
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 188px; }
 
 .banner_footer {
   background: whitesmoke;
   width: 100%;
   border-top: 1px solid #e2e2e2;
   position: relative;
-  top: 30px;
-  height: 60%; }
+  height: 60%;
+  top: 50px; }
 
 .box p {
   position: relative;
@@ -658,6 +657,49 @@ nav > div {
 
 .tab--added ~ div {
   border: 4px solid red; }
+
+#notifications {
+  background: #ffcea0;
+  border-radius: 2px;
+  width: 96.6%;
+  transition: all 0.5s ease;
+  margin: 0px 1.4%;
+  transition: all 0.5s ease;
+  position: relative; }
+
+.meh {
+  padding: 0.6rem 2rem !important;
+  border: 1px solid #ffc186 !important;
+  transition: all 0.5s ease;
+  border-radius: 2px;
+  padding: 0;
+  box-shadow: 0px 2px 0px #e1aa494d; }
+
+.meh::before {
+  content: "\f071";
+  font-family: 'FontAwesome';
+  color: #ec7300;
+  padding-right: 10px; }
+
+.rah::after {
+  content: "\f057";
+  font-family: 'FontAwesome';
+  color: #ec7300;
+  padding-right: 10px;
+  float: right;
+  font-size: 1rem;
+  position: absolute;
+  right: 0;
+  top: 16px;
+  height: 100%;
+  width: 50px;
+  transition: all 0.5s ease; }
+
+.hideNotif {
+  opacity: 0 !important;
+  transition: all 0.5s ease;
+  padding: 0 !important;
+  height: 0 !important; }
 
 /************** Colorbox Core Style: ***************/
 #colorbox, #cboxOverlay, #cboxWrapper {
