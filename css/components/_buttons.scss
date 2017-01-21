@@ -1,0 +1,72 @@
+.get__btn {
+  border-radius: $global-border-radius;
+  cursor: pointer;
+  margin: 0 auto;
+  transition: all 0.9s ease-in-out;
+  text-align: center;
+  font-weight: $weight-regular;
+  padding: 0.6rem 1.6rem;
+  position: relative;
+
+    &--blue {
+      background-color: lighten($blue, 40%);
+      color: $dark-blue;
+      font-size: 0.8rem;
+
+        &::after {
+          color: $blue;
+          height: 34px !important;
+          position: absolute;
+          left: -3px;
+          content: "";
+          border: 1px solid;
+          padding: 1px 81px;
+          top: -3px;
+          border-radius: $global-border-radius;
+          transition: all 0.9s ease-in-out;
+        }
+
+        &:hover {
+          background-color: lighten($green, 40%);
+          color: darken($green, 5%);
+
+            &::after {
+              color: darken($green, 5%);
+            }
+        }
+
+    }
+
+    &--banner {
+      background-color: lighten($blue, 40%);
+      color: $dark-blue;
+      font-size: 0.8rem;
+      width: 60%;
+      margin: 0 auto;
+      padding: 1rem 1.6rem;
+
+        &::after {
+          color: $blue;
+          height: 41px !important;
+          position: absolute;
+          left: -3px;
+          content: "";
+          border: 1px solid;
+          padding: 1px 109px;
+          top: -3px;
+          border-radius: $global-border-radius;
+          transition: all 0.9s ease-in-out;
+        }
+
+        &:hover {
+          background-color: lighten($green, 40%);
+          color: darken($green, 5%);
+
+            &::after {
+              color: darken($green, 5%);
+            }
+        }
+
+    }
+
+}

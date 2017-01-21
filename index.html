@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<title>rentalcars.com | Marketing Banner APP</title>
  		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 				<script src="libs/jquery/dist/jquery.js"></script>
         <script src="libs/jquery-colorbox/jquery.colorbox-min.js"></script>
@@ -39,7 +40,7 @@
 			<nav sticky>
 				<div>
 					<div ng-show="page === 1">
-						<a id="btnLangs" ng-click="loadStep(2, banners)" class="get_btn lang" ng-hide="searchcriteria">Choose Languages</a>
+						<a id="btnLangs" ng-click="loadStep(2, banners)" class="get__btn get__btn--blue lang" ng-hide="searchcriteria">Choose Languages</a>
 					</div>
 						<div ng-show="page === 2">
                 <div class="footer-summary">
@@ -47,10 +48,10 @@
                         {{lang.code}}
                     </span>
                 </div>
-                <a id="btnBanners" ng-click="loadStep(3, languages)" class="get_btn banner">Aff code</a>
+                <a id="btnBanners" ng-click="loadStep(3, languages)" class="get__btn banner">Aff code</a>
             </div>
             <div ng-show="page === 3">
-                <a id="btnBanners" ng-click="loadStep(4, affcode)" class="get_btn banner">Get Banners</a>
+                <a id="btnBanners" ng-click="loadStep(4, affcode)" class="get__btn banner">Get Banners</a>
             </div>
             <div ng-show="page === 4">
             </div>
@@ -66,29 +67,40 @@
 						{{banner.dimensions}}
 				</span>
 
-        	<section id="boxes" class="banner_choice">
-				<div ng-repeat="banner in banners | filter: {dimensions: search.size}">
-			 		<div class="box show">
-        				<div class="banner_preview">
-            				<div class="banner_img">
-                				<img ng-src="img/preview/{{banner.preview}}/en.jpg">
-           			 		</div>
-            				<h1><i class="fa fa-file-image-o icn"></i>{{banner.dimensions}}</h1>
-            				<p>{{banner.description}}</p>
-            				<div class="banner_footer">
-                				<div class="tab tab--magnify">
-                                    <a colorbox href="http://www.rentalcars.com/partners/integrations/banners/{{banner.img}}/en.jpg">
-                                        <i class="fa fa-search-plus fa-3x"></i>
-                                    </a>
-                                </div>
-                				<div class="tab tab--add" ng-class="{'tab--added': banner.selected}" ng-click="banner.selected = !banner.selected">
-                    				<span><i class="fa fa-check-circle fa-3x"></i></span>
-                				</div>
-           			 		</div>
-        				</div>
+      	<section>
+					<div ng-repeat="banner in banners | filter: {dimensions: search.size}">
+			 			<div class="card show">
+        			<div class="card__bannerPreview" ng-class="{'tab--added': banner.selected}">
+								<div ng-class="{'been--selected': banner.selected}"></div>
+            		<div class="card__bannerPreview--bannerImg">
+                	<img ng-src="img/preview/{{banner.preview}}/en.jpg">
+           			</div>
+								<h1 class="card__bannerPreview--heading">{{banner.dimensions}}</h1>
+								<h2 class="card__bannerPreview--subheading">Sales Message</h2>
+            		<p class="card__bannerPreview--body">{{banner.description}}</p>
+								<div class="card__bannerPreviewFooter">
+                	<div class="card__bannerPreviewFooter--view">
+                  	<a colorbox href="http://www.rentalcars.com/partners/integrations/banners/{{banner.img}}/en.jpg">
+											<i class="fa fa-search-plus" aria-hidden="true"></i>
+											Preview
+										</a>
+									</div>
+                	<div class="card__bannerPreviewFooter--size">
+										<i class="fa fa-desktop" aria-hidden="true"></i>
+										{{banner.dimensions}}
+                	</div>
+									<div class="card__bannerPreviewFooter--chosen" ng-class="{'tab--added': banner.selected}">
+										<i class="fa fa-check" aria-hidden="true"></i>
+										Chosen
+
+                	</div>
+								</div>
+								<div ng-click="banner.selected = !banner.selected" class="get__btn get__btn--banner">Select</div>
+							</div>
     				</div>
-				</div>
-			</section>
+					</div>
+				</section>
+
     	</div>
     	<div ng-show="page === 2" class="container">
         	<div id="languages">
@@ -147,10 +159,6 @@
                 </div>
             </div>
         </div>
-    	<footer>
-
-
-        </footer>
 
 	</body>
 </html>
