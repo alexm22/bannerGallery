@@ -1,0 +1,14 @@
+nav {
+  background: #FFFFFF;
+  border-bottom: 1px solid darken(#FFFFFF, 12%);
+  padding: 1.2rem;
+  top: 0px;
+  z-index: 20;
+  display: flex;
+  width: 100%;
+}
+
+nav > div {
+  flex: 1;
+  text-align: right;
+}

@@ -1,0 +1,39 @@
+.steps {
+  &__btn {
+    padding: 0.2rem 1rem;
+    flex: 4;
+    height: 80px;
+    background: none;
+    border: none;
+    border-width: 0;
+    box-sizing: border-box;
+    position: relative;
+    color: lighten( $grey, 26% );
+    font-size: 0.8rem;
+
+    &.selected {
+      color: $green !important;
+      width: 100%;
+      transition: color 1s ease;
+
+        & > span {
+          width: 100%;
+          height: 4px;
+          position: absolute;;
+          z-index: 99999999999999999;
+          bottom: 0;
+          background: $green;
+          left:0;
+          transition: width 1s ease;
+        }
+    }
+  }
+}
+
+.steps__btn > span {
+  width: 0;
+}
+
+.steps .fa {
+    margin-left: 10px;
+}

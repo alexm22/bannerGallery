@@ -52,8 +52,9 @@
           left: -3px;
           content: "";
           border: 1px solid;
-          padding: 1px 109px;
+          padding: 1px 0px;
           top: -3px;
+          width: 99%;
           border-radius: $global-border-radius;
           transition: all 0.9s ease-in-out;
         }

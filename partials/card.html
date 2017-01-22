@@ -1,0 +1,28 @@
+<div class="card show">
+  <div class="card__bannerPreview">
+    <div class="card__bannerPreview--bannerImg">
+      <img ng-src="img/preview/{{banner.preview}}/en.jpg">
+    </div>
+    <h1 class="card__bannerPreview--heading">{{banner.dimensions}}</h1>
+    <h2 class="card__bannerPreview--subheading">Sales Message</h2>
+    <p class="card__bannerPreview--body">{{banner.description}}</p>
+    <div class="card__bannerPreviewFooter">
+      <div class="card__bannerPreviewFooter--view">
+        <a colorbox href="http://www.rentalcars.com/partners/integrations/banners/{{banner.img}}/en.jpg">
+          <i class="fa fa-search-plus" aria-hidden="true"></i>
+          Preview
+        </a>
+      </div>
+      <div class="card__bannerPreviewFooter--size">
+        <i class="fa fa-desktop" aria-hidden="true"></i>
+        {{banner.dimensions}}
+      </div>
+      <div class="card__bannerPreviewFooter--chosen" ng-class="{"tab--added": banner.selected}">
+        <i class="fa fa-check" aria-hidden="true"></i>
+        Chosen
+      </div>
+    </div>
+    <div ng-click="banner.selected = !banner.selected" class="get__btn get__btn--banner">Select</div>
+    <div ng-class="{'been--selected': banner.selected}"></div>
+  </div>
+</div>

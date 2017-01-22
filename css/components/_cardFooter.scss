@@ -13,21 +13,29 @@
   margin-bottom: 10px;
 }
 
-
+.card__bannerPreviewFooter--chosen {
+  color: lighten($blue, 30%);
+}
 
 
 .been--selected {
   width: 40px;
   height: 40px;
   border-radius: 80px;
-  background: white;
   position: absolute;
   z-index: 1;
   right: 30px;
   box-shadow: 0px 1px 1px 0px $green;
-  top: 3px;
-  background: $green;
-  transition: all ease;
+  top: 160px;
+  background-color: $green;
+  -webkit-transition: all 0.5s ease;
+  opacity: 1;
+}
+
+.card .card__bannerPreview:hover > .been--selected {
+//top: -100px;
+  -webkit-transition: all 0.1s ease;
+  opacity: 0;
 }
 
 .been--selected::before {
@@ -37,25 +45,4 @@
   position: absolute;
   top: 12px;
   left: 12px;
-}
-
-.tab {
-    cursor: pointer;
-    height: 100%;
-    padding-top: 26px;
-    border-left: 1px solid #e2e2e2;
-    transition: background-color 0.2s ease-in-out;
-}
-
-.tab a {
-
-}
-
-.tab--added {
-    //border: 1px solid $green;
-    color: $green;
-}
-
-.tab--added .fa-3x {
-    color: $blue !important;
 }

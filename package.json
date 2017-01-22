@@ -1,0 +1,26 @@
+{
+  "name": "bannerygallery",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexm22/bannerGallery.git"
+  },
+  "author": "alex melbourne",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexm22/bannerGallery/issues"
+  },
+  "homepage": "https://github.com/alexm22/bannerGallery#readme",
+  "dependencies": {
+    "gulp-install": "^0.6.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass-glob": "^1.0.8"
+  }
+}

@@ -1,4 +1,4 @@
-var app = angular.module('bannerApp', ['ngAnimate', 'sticky'])
+var app = angular.module('bannerApp', ['ngAnimate', 'sticky', 'directives'])
 
 app.controller('MainCtrl', function($scope, $filter, $window, DataService) {
     $scope.languages = DataService.getLanguages();
@@ -9,6 +9,9 @@ app.controller('MainCtrl', function($scope, $filter, $window, DataService) {
 
     $scope.hideNotif = function () {
       $window.document.getElementById('notifications').className += "hideNotif";
+    }
+
+    $scope.openCard = function () {
     }
 
     $scope.loadStep = function(step, validate) {

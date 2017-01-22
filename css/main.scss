@@ -1,14 +1,3 @@
-//Imports//
-@import url(http://fonts.googleapis.com/css?family=Pacifico|Open+Sans:400,300,600,700);
-
-//Typography//
-$font-open: 'Open Sans', sans-serif;
-$font-pacifico: 'Pacifico',cursive;
-$font-size-small: 0.8em;
-$font-size-regular: 1em;
-$font-size-large: 1.5em;
-$font-size-x-large: 2.5em;
-
 //Colors//
 $primary-color: #333;
 $grey-light: #EFEDEA;
@@ -21,36 +10,22 @@ $white: #FFFFFF;
 $purple: #666699;
 $orange: #FF8D20;
 
-$weight-thin: 300;
-$weight-regular: 400;
-$weight-thick:700;
-
 $global-border-radius: 4px;
 
+@import "base/typography";
+@import "base/resets";
 @import "components/buttons";
 @import "components/card";
+@import "components/nav";
 @import "components/cardFooter";
+@import "components/notifications";
+@import "components/steps";
+@import "layout/header";
+@import "layout/footer";
+@import "vendors/colorbox";
+//@import "components/**/*.scss";
 
 // Standards //
-
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background: lighten($grey-light, 0%);
-  font-family: $font-open;
-  padding-bottom: 100px;
-}
 
 p {
   font-weight: $weight-thin;
@@ -88,45 +63,6 @@ h3 {
 }
 
 // Header & Footer //
-
-header {
-  background-color: #0E99FF;
-  position: relative;
-  border-bottom: 3px soild darken($blue, 20%);
-}
-
-.header {
-  height: 100%;
-  padding-left: 30px;
-  text-align: center;
-}
-
-.header .logo img {
-  margin-top:30px;
-}
-
-footer {
-  background: $blue;
-  bottom: 0;
-  height: 68px;
-  position: fixed;
-  width: 100%;
-}
-
-footer .logo {
-  display: inline;
-  float: left;
-  background: $dark-blue;
-  display: none;
-  width: 100%;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-footer h2 {
-    font-weight: $weight-regular;
-    font-size: 20px;
-}
 
 
 .footer-summary {
@@ -544,144 +480,16 @@ code {
   transition: all 0.5s ease-in-out;
 }
 
-nav {
-  background: #FFFFFF;
-  border-bottom: 1px solid darken(#FFFFFF, 12%);
-  padding: 1rem;
-  top: 0px;
-  z-index: 20;
-  display: flex;
-  width: 100%;
-}
 
-nav > div {
-  flex: 1;
-  text-align: right;
-}
 
-.icn {
-  width: 20px;
-  height: 20px;
-}
-
-.icn.fa {
-  color: $grey;
-  text-shadow: none;
-}
-
-.steps .fa {
-    margin-left: 10px;
-}
-
-.steps button {
-  padding: 0.2rem 1rem;
-  flex: 4;
-  height: 80px;
-  background: none;
-  border: none;
-  border-width: 0;
-  box-sizing: border-box;
-  position: relative;
-  color: lighten( $grey, 26% );
-  font-size: 0.8rem;
-}
-
-.steps button.selected {
-  color: $green !important;
-  width: 100%;
-  transition: color 1s ease;
-}
-
-.steps button > span {
-  width: 0;
-}
-
-.steps button.selected > span {
-    width: 100%;
-    height: 4px;
-    position: absolute;;
-    z-index: 99999999999999999;
-    bottom: 0;
-    background: $green;
-    left:0;
-    transition: width 1s ease;
-}
 
 .tab--added ~ div {
   border: 4px solid red;
 }
 
-#notifications {
-  background: lighten($orange, 25%);
-  border-radius: $global-border-radius;
-  width: 96.6%;
-  transition: all 0.5s ease;
-  margin: 0px 1.4%;
-  transition: all 0.5s ease;
-  position: relative;;
-  //box-shadow: 0px 2px 0px darken($orange,3%);
-}
-
-.meh  {
-  padding: 0.6rem 2rem !important;
-  border: 1px solid lighten($orange, 20%) !important;
-  transition: all 0.5s ease;
-  border-radius: 2px;
-  padding: 0;
-  box-shadow: 0px 2px 0px #e1aa494d
-}
-
-.meh::before {
-  content: "\f071";
-  font-family: 'FontAwesome';
-  color: darken($orange, 10%);
-  padding-right: 10px;
-}
-
-.rah::after {
-  content: "\f057";
-  font-family: 'FontAwesome';
-  color: darken($orange, 10%);
-  padding-right: 10px;
-  float: right;
-  font-size: 1rem;
-  position: absolute;
-  right: 0;
-  top: 16px;
-  height: 100%;
-  width: 50px;
-  transition: all 0.5s ease;
-}
-
-.hideNotif {
-  opacity: 0 !important;
-  transition: all 0.5s ease;
-  padding: 0 !important;
-  height: 0 !important;
-
-}
 
 
-/************** Colorbox Core Style: ***************/
 
-#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
-#cboxWrapper {max-width:none;}
-#cboxOverlay{position:fixed; width:100%; height:100%;}
-#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
-#cboxContent{position:relative;}
-#cboxLoadedContent{overflow:auto; -webkit-overflow-scrolling: touch;}
-#cboxTitle{margin:0;}
-.cboxPhoto{float:left; margin:auto; border:0; display:block; max-width:none; -ms-interpolation-mode:bicubic;}
-#colorbox, #cboxContent, #cboxLoadedContent{box-sizing:content-box; -moz-box-sizing:content-box; -webkit-box-sizing:content-box;}
-#cboxOverlay{background:#101010; opacity: 0.9; filter: alpha(opacity = 90);}
-#colorbox{outline:0; border: 6px solid #FFFFFF;}
-#cboxContent{background:#fff; overflow:visible;}
-#cboxLoadedContent{margin-bottom:5px;}
-#cboxCurrent{position:absolute; bottom:-25px; left:58px; font-weight:bold; color:#7C7C7C;}
-/* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
-#cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {border:0; padding:0; margin:0; overflow:visible;  position:absolute; bottom:-29px; background:url(../img/colorbox/controls.png) no-repeat 0px 0px; width:23px; height:23px; text-indent:-9999px;}
-/* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
-#cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {outline:0;}
 
 /************** Media Quries *****************/
 
