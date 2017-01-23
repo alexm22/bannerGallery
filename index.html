@@ -47,7 +47,6 @@
 			    <div ng-show="page === 4">
 			    </div>
 			  </div>
-				<closecard></closecard>
 			</nav>
     	<div ng-show="page === 1" class="container">
 			<!--div class="search_input size">
@@ -60,8 +59,10 @@
 				</span>
 
       	<section>
-					<div ng-repeat="banner in banners | filter: {dimensions: search.size}">
+					<div ng-repeat="banner in banners | filter: {dimensions: search.size}" class="card--hold">
+						
 						<card></card>
+
 					</div>
 				</section>
 

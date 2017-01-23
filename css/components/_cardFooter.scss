@@ -32,12 +32,6 @@
   opacity: 1;
 }
 
-.card .card__bannerPreview:hover > .been--selected {
-//top: -100px;
-  -webkit-transition: all 0.1s ease;
-  opacity: 0;
-}
-
 .been--selected::before {
   content: "\f00c";
   color: white;

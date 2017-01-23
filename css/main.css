@@ -110,6 +110,7 @@ body {
   -webkit-transition: all 1s ease;
   width: 100%;
   height: 310px;
+  overflow: hidden;
 }
 .card .card__bannerPreview .card__bannerPreview:hover {
   transition-timing-function: ease-in;
@@ -168,7 +169,23 @@ body {
 }
 
 .closepls {
-  float: left;
+  position: absolute;
+  right: 25px;
+  z-index: 1;
+  top: 15px;
+  display: none;
+}
+
+.card--hold {
+  position: relative;
+}
+
+.imgHeight {
+  height: 72px !important;
+}
+
+.card__bannerPreviewFooter--chosen.tab--added {
+  color: #0AE791;
 }
 
 nav {
@@ -217,11 +234,6 @@ nav > div {
   background-color: #0AE791;
   -webkit-transition: all 0.5s ease;
   opacity: 1;
-}
-
-.card .card__bannerPreview:hover > .been--selected {
-  -webkit-transition: all 0.1s ease;
-  opacity: 0;
 }
 
 .been--selected::before {
