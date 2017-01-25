@@ -1,9 +1,10 @@
 <div class="card show">
   <closecard></closecard>
-  <div class="card__bannerPreview">
+  <div class="card__bannerPreview" ng-class="{'banner--added': banner.selected}">
     <div class="card__bannerPreview--bannerImg">
       <img id="yeah" ng-src="img/preview/{{banner.preview}}/en.jpg">
     </div>
+    <h1 class="card__bannerPreview--headingMain">Banner Size</h1>
     <h1 class="card__bannerPreview--heading">{{banner.dimensions}}</h1>
     <h2 class="card__bannerPreview--subheading">Sales Message</h2>
     <p class="card__bannerPreview--body">{{banner.description}}</p>
@@ -24,7 +25,5 @@
       </div>
     </div>
     <div ng-click="banner.selected = !banner.selected" class="get__btn get__btn--banner">Select</div>
-    <i class="fa fa-plus-circle" aria-hidden="true"></i>
-
   </div>
 </div>
