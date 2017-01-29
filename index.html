@@ -25,13 +25,13 @@
 				<button class="steps__btn" ng-class="{'selected': page == 3, 'passed': page &gt; 3}" ng-click="previousStep(3)"><span></span>Enter your Aff code <i class="fa fa-cogs"></i></button>
 				<button class="steps__btn" ng-class="{'selected': page == 4, 'passed': page &gt; 4}" ng-click="previousStep(4)"><span></span>Grab your banners</button>
 			</div>
-
-					<div class="logo">
-            	<a href="index.html"><img src="img/rc-small.png"></a>
-        	</div>
     	</header>
 			<nav sticky>
+
 			  <div>
+					<div class="logo">
+							<a href="index.html"><img src="img/RC-Logomark_RGB.png"></a>
+					</div>
 			    <div ng-show="page === 1">
 			      <a id="btnLangs" ng-click="loadStep(2, banners)" class="get__btn get__btn--blue lang" ng-hide="searchcriteria">Choose Languages</a>
 			    </div>
@@ -54,13 +54,12 @@
         </div-->
 				<div id="notifications" ng-click="hideNotif()">
 				</div>
-				<span sticky class="box__dim" ng-repeat="banner in banners | filter: {selected: true}">
+				<span ng-repeat="banner in banners | filter: {selected: true}">
 
 				</span>
 
       	<section>
 					<div ng-repeat="banner in banners | filter: {dimensions: search.size}" class="card--hold">
-						
 						<card></card>
 
 					</div>
@@ -68,6 +67,8 @@
 
     	</div>
     	<div ng-show="page === 2" class="container">
+			<languages></languages>
+
         	<div id="languages">
             <h3>Please Choose your Language(s)</h3>
         		<div ng-repeat="lang in languages | filter: {languages: search.code}">

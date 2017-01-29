@@ -315,7 +315,7 @@
             $elem
               .css('z-index', '10')
               .css('position', 'fixed')
-              .css('background-color', '#0771C4')
+              .css('background-color', '#FFFFFF')
               .css('left', $elem.css('left').replace('px', '') + 'px')
               .css(anchor, (offset + elementsOffsetFromTop (scrollbar)) + 'px')
               .css('margin-top', 0);

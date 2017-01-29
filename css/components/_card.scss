@@ -115,9 +115,10 @@
   border-radius: 60px;
   //border: 1px solid $blue;*/
   padding: 5px 10px;
+  opacity: 0;
 
     &::before {
-      content: "\f0c9";
+      content: "\f00c";
       font-family: 'FontAwesome';
       color: lighten($blue, 40%);
       font-size: 12px;
@@ -186,4 +187,8 @@
 
 .banner--added {
   border-bottom: 2px solid $green;
+}
+
+.card--added {
+  opacity: 1 !important;
 }

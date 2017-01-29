@@ -34,7 +34,6 @@
               color: darken($green, 5%);
             }
         }
-
     }
 
     &--banner {
@@ -68,6 +67,15 @@
             }
         }
 
+    }
+
+    &--active {
+      background-color: lighten($green, 40%);
+      color: darken($green, 5%);
+
+        &::after {
+          border-color: darken($green, 5%);          
+        }
     }
 
 }

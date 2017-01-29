@@ -3151,7 +3151,7 @@
 		"oA": 0,
 		"oAP": "\/img\/RC-Logomark_RGB.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 1
 		},
 	"\/img\/rc-small.png": {
 		"ft": 32768,
@@ -3203,6 +3203,15 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/js\/app-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/js\/directives-min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/directives-min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -4797,6 +4806,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/partials\/card.html",
+		"oF": 0
+		},
+	"\/partials\/languages.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/partials\/languages.html",
 		"oF": 0
 		},
 	"\/prepros.cfg": {

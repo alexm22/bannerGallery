@@ -68,6 +68,11 @@ body {
       color: #09cf82; }
       .get__btn--banner:hover::after {
         color: #09cf82; }
+  .get__btn--active {
+    background-color: #c1fce5;
+    color: #09cf82; }
+    .get__btn--active::after {
+      border-color: #09cf82; }
 
 .card {
   padding: 20px;
@@ -163,9 +168,10 @@ body {
   width: 30px;
   height: 30px;
   border-radius: 60px;
-  padding: 5px 10px; }
+  padding: 5px 10px;
+  opacity: 0; }
   .closepls::before {
-    content: "\f0c9";
+    content: "\f00c";
     font-family: 'FontAwesome';
     color: #d3ecfe;
     font-size: 12px; }
@@ -225,6 +231,9 @@ body {
 .banner--added {
   border-bottom: 2px solid #0AE791; }
 
+.card--added {
+  opacity: 1 !important; }
+
 nav {
   background: #FFFFFF;
   border-bottom: 1px solid #e0e0e0;
@@ -252,7 +261,7 @@ nav > div {
   margin-bottom: 10px; }
 
 .card__bannerPreviewFooter--chosen {
-  color: #a2d6fc; }
+  color: #d3ecfe; }
 
 .been--selected {
   width: 40px;
@@ -307,7 +316,7 @@ nav > div {
   font-size: 1rem;
   position: absolute;
   right: 0;
-  top: 16px;
+  top: 12px;
   height: 100%;
   width: 50px;
   transition: all 0.5s ease; }
@@ -832,12 +841,11 @@ code {
   position: relative;
   margin-bottom: 30px; }
 
+.logo {
+  float: left; }
+
 .logo img {
-  width: 30px;
-  float: right;
-  position: absolute;
-  top: 20px;
-  right: 30px; }
+  width: 17px; }
 
 .card__dim {
   background: #e6e3de;

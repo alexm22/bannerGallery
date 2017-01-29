@@ -1,5 +1,5 @@
 <div class="card show">
-  <closecard></closecard>
+  <closecard ng-class="{'card--added': banner.selected}"></closecard>
   <div class="card__bannerPreview" ng-class="{'banner--added': banner.selected}">
     <div class="card__bannerPreview--bannerImg">
       <img id="yeah" ng-src="img/preview/{{banner.preview}}/en.jpg">
@@ -24,6 +24,6 @@
         Chosen
       </div>
     </div>
-    <div ng-click="banner.selected = !banner.selected" class="get__btn get__btn--banner">Select</div>
+    <div ng-click="banner.selected = !banner.selected" class="get__btn get__btn--banner" ng-class="{'get__btn--active': banner.selected}">Select</div>
   </div>
 </div>
