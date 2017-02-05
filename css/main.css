@@ -1,4 +1,29 @@
 @import url(http://fonts.googleapis.com/css?family=Pacifico|Open+Sans:400,300,600,700);
+p {
+  font-weight: 300;
+  color: #4d4d4d;
+  font-size: 0.9rem;
+  margin-top: 0; }
+
+h1 {
+  color: #0771C4;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding-top: 10px;
+  text-shadow: 2px 2px 1px #ffffff;
+  font-size: 1rem !important;
+  font-weight: 300; }
+
+h2 {
+  font-family: "Open Sans", sans-serif;
+  text-align: center; }
+
+h3 {
+  font-size: 1.5em;
+  color: #0E94F7;
+  font-weight: 300;
+  text-align: center; }
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -87,6 +112,8 @@ body {
   transition-timing-function: ease-out;
   transition: 0.2s;
   height: 310px; }
+  .card:hover {
+    cursor: pointer; }
 
 .thisactivecard {
   -webkit-box-shadow: 0px 4px 8px 3px #dfdfdf;
@@ -338,6 +365,8 @@ nav > div {
   position: relative;
   color: #dbdbdb;
   font-size: 0.8rem; }
+  .steps__btn:hover {
+    cursor: pointer; }
   .steps__btn.selected {
     color: #0AE791 !important;
     width: 100%;
@@ -357,6 +386,50 @@ nav > div {
 
 .steps .fa {
   margin-left: 10px; }
+
+.langtab {
+  background: whitesmoke;
+  border-radius: 4px;
+  /****box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);****/
+  cursor: pointer;
+  padding: 10px 6px;
+  transform: translateY(-2px);
+  transition: all 0.1s linear 0s;
+  width: 100%;
+  margin: 27px 3%; }
+
+.langtab--added {
+  background: #0AE791;
+  box-shadow: none;
+  border: none;
+  transition: all 0.1s linear 0s;
+  /****box-shadow: 0px -1px 1px #5e5e5e;****/ }
+
+.langtab--added p {
+  color: #FFFFFF !important; }
+
+.langtab--added .fa.fa-check.fa-3x {
+  color: #FFFFFF !important; }
+
+.langtab.langtab--add > p {
+  display: inline;
+  font-size: 20px;
+  line-height: 20px;
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.langtab .flag {
+  background-image: url("../img/sprite-flags.png");
+  display: block;
+  float: left;
+  height: 22px;
+  width: 22px; }
+
+.langtab.langtab--add i {
+  border-left: 1px solid #e2e2e2;
+  float: right;
+  padding: 0 10px;
+  font-size: 1.5rem !important; }
 
 header {
   background-color: #0E99FF;
@@ -382,6 +455,31 @@ footer .logo {
 footer h2 {
   font-weight: 400;
   font-size: 20px; }
+
+.languages {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row; }
+
+.languages__container {
+  width: 75%; }
+
+.languages__sidebar {
+  width: 20%;
+  background: #FFFFFF;
+  padding: 1rem;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column; }
+
+.languages__sidebar--img {
+  width: 100%;
+  border-radius: 4px; }
+
+.languages__container--meh {
+  background: #FFFFFF;
+  padding: 1rem;
+  border-radius: 4px; }
 
 /************** Colorbox Core Style: ***************/
 #colorbox, #cboxOverlay, #cboxWrapper {
@@ -464,32 +562,6 @@ footer h2 {
 /* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
 #cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {
   outline: 0; }
-
-p {
-  font-weight: 300;
-  color: #4d4d4d;
-  font-size: 0.9rem;
-  margin-top: 0; }
-
-h1 {
-  color: #0771C4;
-  font-family: "Open Sans", sans-serif;
-  margin: 0;
-  padding-top: 10px;
-  text-shadow: 2px 2px 1px #ffffff;
-  text-align: center;
-  font-size: 2.5em;
-  font-weight: 300; }
-
-h2 {
-  font-family: "Open Sans", sans-serif;
-  text-align: center; }
-
-h3 {
-  font-size: 1.5em;
-  color: #0E94F7;
-  font-weight: 300;
-  text-align: center; }
 
 .steps {
   display: flex;
@@ -616,54 +688,9 @@ input[type=checkbox]:checked + label:before {
   width: 80%;
   margin: 2% 10%; }
 
-.langtab {
-  background: whitesmoke;
-  border-radius: 4px;
-  /****box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);****/
-  cursor: pointer;
-  float: left;
-  padding: 10px 6px;
-  transform: translateY(-2px);
-  transition: all 0.1s linear 0s;
-  width: 100%;
-  margin: 27px 3%; }
-
-.langtab--added {
-  background: #0AE791;
-  box-shadow: none;
-  border: none;
-  transition: all 0.1s linear 0s;
-  /****box-shadow: 0px -1px 1px #5e5e5e;****/ }
-
-.langtab--added p {
-  color: #FFFFFF !important; }
-
-.langtab--added .fa.fa-check.fa-3x {
-  color: #FFFFFF !important; }
-
 #languages [data-id] {
   width: 93%;
   transition: all 0.2s ease-in-out 0s; }
-
-.langtab.langtab--add > p {
-  display: inline;
-  font-size: 20px;
-  line-height: 20px;
-  padding-left: 10px;
-  padding-right: 10px; }
-
-.langtab .flag {
-  background-image: url("../img/sprite-flags.png");
-  display: block;
-  float: left;
-  height: 22px;
-  width: 22px; }
-
-.langtab.langtab--add i {
-  border-left: 1px solid #e2e2e2;
-  float: right;
-  padding: 0 10px;
-  font-size: 1.5rem !important; }
 
 .en {
   background-position: 0 -24px; }

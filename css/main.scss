@@ -20,42 +20,14 @@ $global-border-radius: 4px;
 @import "components/cardFooter";
 @import "components/notifications";
 @import "components/steps";
+@import "components/langtabs";
 @import "layout/header";
 @import "layout/footer";
+@import "layout/sidebar";
 @import "vendors/colorbox";
 //@import "components/**/*.scss";
 
 // Standards //
-
-p {
-  font-weight: $weight-thin;
-  color: darken( $grey, 30% );
-  font-size: 0.9rem;
-  margin-top: 0;
-}
-
-h1 {
-	color: $dark-blue;
-  font-family: $font-open;
-  margin: 0;
-  padding-top: 10px;
-  text-shadow: 2px 2px 1px #ffffff;
-  text-align: center;
-  font-size: $font-size-x-large;
-  font-weight: $weight-thin;
-}
-
-h2 {
-  font-family: $font-open;
-  text-align: center;
-}
-
-h3 {
-  font-size: $font-size-large;
-  color: $blue;
-  font-weight: $weight-thin;
-  text-align: center;
-}
 
 .steps {
   display: flex;
@@ -211,62 +183,14 @@ input[type=checkbox]:checked + label:before {
     margin: 2% 10%;
 }
 
-.langtab {
-    background: lighten( $grey, 36% );
-    border-radius: $global-border-radius;
-    /****box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);****/
-    cursor: pointer;
-    float: left;
-    padding: 10px 6px;
-    transform: translateY(-2px);
-    transition: all 0.1s linear 0s;
-    width: 100%;
-    margin: 27px 3%;
-}
 
-.langtab--added {
-    background: $green;
-    box-shadow: none;
-    border: none;
-    transition: all 0.1s linear 0s;
-    /****box-shadow: 0px -1px 1px #5e5e5e;****/
-}
-
-.langtab--added p {
-  color: $white !important;
-}
-
-.langtab--added .fa.fa-check.fa-3x {
-  color: $white !important;
-}
 
 #languages [data-id] {
   width: 93%;
   transition: all 0.2s ease-in-out 0s;
 }
 
-.langtab.langtab--add > p {
-    display: inline;
-    font-size: 20px;
-    line-height: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
 
-.langtab .flag {
-    background-image: url("../img/sprite-flags.png");
-    display: block;
-    float: left;
-    height: 22px;
-    width: 22px;
-}
-
-.langtab.langtab--add i {
-    border-left: 1px solid #e2e2e2;
-    float: right;
-    padding: 0 10px;
-    font-size: 1.5rem !important;
-}
 
 .en {
      background-position: 0 -24px;

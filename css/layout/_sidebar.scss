@@ -1,0 +1,29 @@
+.languages {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.languages__container {
+  width: 75%;
+}
+
+.languages__sidebar {
+  width: 20%;
+  background: #FFFFFF;
+  padding: 1rem;
+  border-radius: $global-border-radius;
+  display: flex;
+  flex-direction: column;
+}
+
+.languages__sidebar--img {
+  width: 100%;
+  border-radius: $global-border-radius;
+}
+
+.languages__container--meh {
+  background: #FFFFFF;
+  padding: 1rem;
+  border-radius: $global-border-radius;
+}

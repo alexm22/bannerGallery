@@ -12,3 +12,32 @@ $font-size-x-large: 2.5em;
 $weight-thin: 300;
 $weight-regular: 400;
 $weight-thick:700;
+
+p {
+  font-weight: $weight-thin;
+  color: darken( $grey, 30% );
+  font-size: 0.9rem;
+  margin-top: 0;
+}
+
+h1 {
+	color: $dark-blue;
+  font-family: $font-open;
+  margin: 0;
+  padding-top: 10px;
+  text-shadow: 2px 2px 1px #ffffff;
+  font-size: 1rem !important;
+  font-weight: $weight-thin;
+}
+
+h2 {
+  font-family: $font-open;
+  text-align: center;
+}
+
+h3 {
+  font-size: $font-size-large;
+  color: $blue;
+  font-weight: $weight-thin;
+  text-align: center;
+}

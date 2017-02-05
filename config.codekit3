@@ -2199,6 +2199,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/css\/components\/_langtabs.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/components\/_langtabs.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/css\/components\/_nav.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -2280,6 +2293,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/css\/layout\/_header.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/css\/layout\/_sidebar.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/layout\/_sidebar.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1

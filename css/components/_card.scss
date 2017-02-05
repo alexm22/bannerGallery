@@ -12,6 +12,10 @@
   transition-timing-function: ease-out;
   transition: 0.2s;
   height: 310px;
+
+    &:hover {
+      cursor: pointer;
+    }
 }
 
 .thisactivecard {

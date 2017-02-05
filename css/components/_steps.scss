@@ -11,6 +11,10 @@
     color: lighten( $grey, 26% );
     font-size: 0.8rem;
 
+    &:hover {
+      cursor: pointer;
+    }
+
     &.selected {
       color: $green !important;
       width: 100%;
