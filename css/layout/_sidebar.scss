@@ -27,3 +27,24 @@
   padding: 1rem;
   border-radius: $global-border-radius;
 }
+
+.languages__container--wrap {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 1px solid #ededed;
+  padding-top: 10px;
+}
+.languages__container__tabs {
+    width: 143px;
+    padding: 10px;
+}
+
+.languages__container__tabs label {
+    padding-left: 20px;
+    font-size: 0.9rem;
+}
+
+.languages__container--heading {
+  font-size: 1.3rem !important;
+  margin-bottom: 30px !important;
+}

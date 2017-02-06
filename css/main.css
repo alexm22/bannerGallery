@@ -481,6 +481,24 @@ footer h2 {
   padding: 1rem;
   border-radius: 4px; }
 
+.languages__container--wrap {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 1px solid #ededed;
+  padding-top: 10px; }
+
+.languages__container__tabs {
+  width: 143px;
+  padding: 10px; }
+
+.languages__container__tabs label {
+  padding-left: 20px;
+  font-size: 0.9rem; }
+
+.languages__container--heading {
+  font-size: 1.3rem !important;
+  margin-bottom: 30px !important; }
+
 /************** Colorbox Core Style: ***************/
 #colorbox, #cboxOverlay, #cboxWrapper {
   position: absolute;
@@ -606,46 +624,6 @@ footer h2 {
 .fa-3x {
   font-size: 2.5em !important;
   color: #999999; }
-
-label {
-  display: inline-block;
-  cursor: pointer;
-  position: relative;
-  padding-left: 25px;
-  margin-right: 15px;
-  font-size: 13px; }
-
-input[type=checkbox] {
-  display: none; }
-
-label:before {
-  content: "\f00c";
-  display: table;
-  width: 36px;
-  height: 36px;
-  background-color: #c8c8c8;
-  color: #F5F5F5;
-  font-size: 26px;
-  line-height: 36px;
-  font-family: FontAwesome; }
-
-label:before:hover {
-  background-color: #67ACE9; }
-
-.checkbox label::before {
-  border-radius: 50%;
-  margin-left: -14px;
-  position: relative;
-  top: 5px; }
-
-input[type=checkbox]:checked + label:before {
-  content: "\f00c ";
-  font-size: 26px;
-  color: #f3f3f3;
-  text-align: center;
-  line-height: 36px;
-  background-color: #67ACE9;
-  font-family: FontAwesome; }
 
 .search_input {
   background: #e6e6e6 none repeat scroll 0 0;
